@@ -109,6 +109,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url(/bg-mobile.25f8a1c9.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 62rem) {
+  .challenge-wrapper {
+    background-image: url(/bg-desktop.f8e799e4.png);
+    background-size: contain;
+    background-position: bottom;
+  }
 }
 
 @media (min-width: 62rem) {
