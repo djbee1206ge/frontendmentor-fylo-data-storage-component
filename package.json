@@ -1,0 +1,25 @@
+{
+  "name": "frontendmentor-fylo-data-storage-component",
+  "version": "1.0.0",
+  "description": "![Design preview for the Fylo data storage component coding challenge](./design/desktop-preview.jpg)",
+  "main": "",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djbee1206ge/frontendmentor-fylo-data-storage-component.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djbee1206ge/frontendmentor-fylo-data-storage-component/issues"
+  },
+  "homepage": "https://github.com/djbee1206ge/frontendmentor-fylo-data-storage-component#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.32.6"
+  }
+}

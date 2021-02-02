@@ -31,31 +31,63 @@
   }
 }
 
-.slider{
-  &-container {
-    position: relative;
-    width: 100%;
-    max-width: 33.75rem;
-    height: 10rem;
-    padding: 2rem;
-    margin-bottom: 1rem;
-    background-color: var(--neutral-500);
-    border-radius: 0.75rem;
-    display: flex;
-    flex-direction: column;
-    @media (min-width: 62rem) {
-      margin: 0;
-    }
-    .bold {
-      font-weight: var(--fw-700);
-    }
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 33.75rem;
+  height: 10rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  background-color: var(--neutral-500);
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+ 
+  @media (min-width: 62rem) {
+    margin: 0;
+    
   }
-  &-caption {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }  
-
+    .bar {
+      display: inline-block;
+      position: absolute;
+      z-index: 3;
+      left: 2px;
+      top: 50%;
+      width: 5rem;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #ff0000;
+      overflow: hidden;
+    }
+    .bar, .fill {
+      display: block;
+      width: 0;
+      height: 100%;
+      background-color: #6200ee;
+    }   
+ 
+  }
+  #left{
+    color: green;
+  }
+.bold {
+  display: inline-block;
+  font-weight: 700;
+  width: 6.5ch;
+  text-align: right;
+} 
+.left {
+  display: inline-block;
+  text-align: right;
+  width: 7ch;
+  font-weight: 700;
+  font-size: larger;
+}
+.caption {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
   .space-left {
     position: absolute;
@@ -67,7 +99,7 @@
     align-items: center;
     font-size: 3rem;
     background-color: var(--neutral-100);
-    color: var(--neutral-900);
+    color: green;
     padding: 1rem;
     border-radius: 0.5rem;
     font-weight: var(--fw-700);
@@ -100,66 +132,101 @@
   }
   
   
-  input[type='range'] {
-    position: relative;
-    -webkit-appearance: none;
-    background-color: var(--neutral-600);
-    height: 1rem;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 1rem;
-    padding: none;
-    margin: 1.125rem 0 0.75rem;
-    &::before {
-      position: absolute;
-      content: '';
-      top: 0;
-      left: 0;
-      right: -5rem;      
-      height: 1rem;      
-      border-radius: 1rem;
-      background-color: var(--neutral-600);
-    }
-    &:focus {
-      outline: none;
-    }
-    &::-webkit-slider-runnable-track {
-      // background: purple;
-      background-image: linear-gradient(90deg, hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 100%);
-      height: 1rem;
-      border-radius: 1rem;
-      z-index: 1;
-      cursor:pointer;
-    }
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      height: 0.8rem;
-      width: 0.8rem;
-      background: #fff;
-      border-radius: 50%;      
-      margin-top: 0.1rem;
-      box-shadow: 1px 1px 1px var(--neutral-300);
-      cursor: ew-resize;        
-    }
-  }
+  // .slider {
+  //   position: relative;
+  //   z-index: 2;
+  //   -webkit-appearance: none;
+  //   width: 100%;
+  //   height: 10px;
+  //   border-radius: 5px;
+  //   outline: none;
+  //   background-color: transparent;
+  
 
+    
+  //   &::-webkit-slider-runnable-track {
+  //     background: purple;
+  //     background-image: linear-gradient(90deg, hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 100%);
+  //     height: 1rem;
+  //     border-radius: 1rem;
+  //     z-index: 1;
+  //     cursor:pointer;
+  //   }
+  //   &::-webkit-slider-thumb {
+  //     -webkit-appearance: none;
+  //     width: 30px;
+  //     height: 30px;
+  //     background-color: #6200ee;
+  //     border-radius: 50%;
+  //     cursor: pointer;
+  //     outline: none;
+  //     box-shadow: 0 0 0 0 rgba(98, 0, 238, .1);
+  //     transition: .3s ease-in-out;       
+  //   }
+    
+    
+    
+    
+    
+    
+    
+    /*  TO DO
+    Fix the white sèace around the Firefox slider */  
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 0.625rem;
+  border-radius: 1rem;
+  max-width: 29.5rem;
+  overflow: hidden;
+  &:focus {
+    outline: none;
+    
+  }
+    &::-moz-range-track{
+        background: var(--neutral-600);
+        border-radius: 0.25rem;
+        height: 0.625rem;
+        cursor:pointer;
+        color: red;
+      }
+      &::-moz-range-thumb {
+          -webkit-appearance: none;
+          height: 0.625rem;
+          width: 0.625rem;
+          background: white;
+          border-radius: 50%;
+          margin-top: -7px;  
+          box-shadow: 
+          -1rem 0 0 1rem hsl(335, 100%, 65%),
+          -2rem 0 0 2rem hsl(335, 100%, 67%),
+          -3rem 0 0 3rem hsl(335, 100%, 69%),
+          -4rem 0 0 4rem hsl(335, 100%, 71%),
+          -5rem 0 0 5rem hsl(335, 100%, 73%),
+          -6rem 0 0 6rem hsl(335, 100%, 75%),
+          -7rem 0 0 7rem hsl(335, 100%, 77%),
+          -8rem 0 0 8rem hsl(335, 100%, 79%),
+          -9rem 0 0 9rem hsl(335, 100%, 81%),
+          -10rem 0 0 10rem hsl(335, 100%, 82%),
+          -11rem 0 0 11rem hsl(335, 100%, 83%),
+          -12rem 0 0 12rem hsl(335, 100%,84%),
+          -13rem 0 0 13rem hsl(335, 100%, 85%),
+          -14rem 0 0 14rem hsl(335, 100%, 86%),
+          -15rem 0 0 15rem hsl(335, 100%, 87%),
+          -30rem 0 0 29.4rem hsl(335, 100%, 88%),
+          ;
+          cursor:pointer;        
+        }
   
+}    
   
-  
-  
-  
-  
- /*  TO DO
-            Fix the white sèace around the Firefox slider */  
-        
-            // &::-moz-range-track{
-            //   background: purple;
-            //   border-radius: 0.25rem;
-            //   width: 100%;
-            //   height: 0.625rem;
-            //   cursor:pointer;
-            // }
-            // &::-moz-range-thumb {
+        // &::-ms-track {
+          //   background: purple;
+          //   border-radius: 0.25rem;
+          //   width: 100%;
+          //   height: 0.625rem;
+          //   cursor:pointer;
+          // }
+          // &::-ms-thumb {
             //   -webkit-appearance: none;
             //   height: 1.5rem;
             //   width: 1.5rem;
@@ -169,20 +236,4 @@
             //   margin-top: -7px;  
             //   cursor:pointer;        
             // }
-            // &::-ms-track {
-            //   background: purple;
-            //   border-radius: 0.25rem;
-            //   width: 100%;
-            //   height: 0.625rem;
-            //   cursor:pointer;
-            // }
-            // &::-ms-thumb {
-            //   -webkit-appearance: none;
-            //   height: 1.5rem;
-            //   width: 1.5rem;
-            //   background: #fff;
-            //   border-radius: 50%;
-            //   border: 1px solid purple;
-            //   margin-top: -7px;  
-            //   cursor:pointer;        
-            // }
+// }

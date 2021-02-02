@@ -41,7 +41,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -72,7 +72,7 @@ table {
   --fw-700: 700;
   --bs-200: 0.1rem 0.1rem 0.5rem var(--neutral-500);
   --bs-300: 0.1rem 0.1rem 0.5rem var(--neutral-600);
-  --ff-regular: 'Raleway', sans-serif;
+  --ff-regular: "Raleway", sans-serif;
 }
 
 body {
@@ -87,7 +87,6 @@ body {
   font-size: var(--fs-400);
   color: var(--neutral-100);
 }
-
 @media (max-width: 23.4rem) {
   body {
     font-size: 70%;
@@ -117,7 +116,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     flex-direction: row;
   }
 }
@@ -139,22 +138,18 @@ body {
   color: var(--neutral-100);
   font-size: var(--fs-400);
 }
-
 .attribution * {
   margin-right: 2rem;
 }
-
 .attribution a {
   color: var(--primary-800);
   letter-spacing: 0.1rem;
   text-decoration: none;
   margin-left: 0.25rem;
 }
-
 .attribution a:hover, .attribution a :focus {
   text-decoration: underline;
 }
-
 .attribution a:active {
   transform: scale(0.98);
 }
@@ -171,18 +166,15 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
 }
-
 @media (min-width: 62rem) {
   .share {
     margin: 0 2rem 0 0;
   }
 }
-
 .share-icons {
   display: flex;
   align-items: center;
 }
-
 .share-icons a {
   display: flex;
   align-items: center;
@@ -192,7 +184,6 @@ body {
   background-color: var(--neutral-600);
   border-radius: 0.5rem;
 }
-
 .share-icons * + * {
   margin-left: 1rem;
 }
@@ -208,19 +199,52 @@ body {
   border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 }
-
 @media (min-width: 62rem) {
   .slider-container {
     margin: 0;
   }
 }
-
-.slider-container .bold {
-  font-weight: var(--fw-700);
+.slider-container .bar {
+  display: inline-block;
+  position: absolute;
+  z-index: 3;
+  left: 2px;
+  top: 50%;
+  width: 5rem;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ff0000;
+  overflow: hidden;
+}
+.slider-container .bar, .slider-container .fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: #6200ee;
 }
 
-.slider-caption {
+#left {
+  color: green;
+}
+
+.bold {
+  display: inline-block;
+  font-weight: 700;
+  width: 6.5ch;
+  text-align: right;
+}
+
+.left {
+  display: inline-block;
+  text-align: right;
+  width: 7ch;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.caption {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -236,12 +260,11 @@ body {
   align-items: center;
   font-size: 3rem;
   background-color: var(--neutral-100);
-  color: var(--neutral-900);
+  color: green;
   padding: 1rem;
   border-radius: 0.5rem;
   font-weight: var(--fw-700);
 }
-
 @media (min-width: 62rem) {
   .space-left {
     background-color: var(--neutral-100);
@@ -251,7 +274,7 @@ body {
   }
   .space-left::after {
     position: absolute;
-    content: '';
+    content: "";
     bottom: 0;
     transform: translateY(50%);
     right: 0;
@@ -262,7 +285,6 @@ body {
     border-right: 1.25rem solid var(--neutral-100);
   }
 }
-
 .space-left .small {
   font-size: 1rem;
   color: var(--neutral-300);
@@ -270,52 +292,34 @@ body {
   margin-left: 0.5rem;
 }
 
-input[type='range'] {
-  position: relative;
+/*  TO DO
+Fix the white sèace around the Firefox slider */
+input[type=range] {
   -webkit-appearance: none;
-  background-color: var(--neutral-600);
-  height: 1rem;
-  width: 100%;
+  height: 0.625rem;
+  border-radius: 1rem;
+  max-width: 29.5rem;
   overflow: hidden;
-  border-radius: 1rem;
-  padding: none;
-  margin: 1.125rem 0 0.75rem;
 }
-
-input[type='range']::before {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  right: -5rem;
-  height: 1rem;
-  border-radius: 1rem;
-  background-color: var(--neutral-600);
-}
-
-input[type='range']:focus {
+input[type=range]:focus {
   outline: none;
 }
-
-input[type='range']::-webkit-slider-runnable-track {
-  background-image: linear-gradient(90deg, #ffa399 0%, #ff4d97 100%);
-  height: 1rem;
-  border-radius: 1rem;
-  z-index: 1;
+input[type=range]::-moz-range-track {
+  background: var(--neutral-600);
+  border-radius: 0.25rem;
+  height: 0.625rem;
+  cursor: pointer;
+  color: red;
+}
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 0.625rem;
+  width: 0.625rem;
+  background: white;
+  border-radius: 50%;
+  margin-top: -7px;
+  box-shadow: -1rem 0 0 1rem #ff4d97, -2rem 0 0 2rem #ff579d, -3rem 0 0 3rem #ff61a3, -4rem 0 0 4rem #ff6ba9, -5rem 0 0 5rem #ff75af, -6rem 0 0 6rem #ff80b5, -7rem 0 0 7rem #ff8abb, -8rem 0 0 8rem #ff94c1, -9rem 0 0 9rem #ff9ec6, -10rem 0 0 10rem #ffa3c9, -11rem 0 0 11rem #ffa8cc, -12rem 0 0 12rem #ffadcf, -13rem 0 0 13rem #ffb3d2, -14rem 0 0 14rem #ffb8d5, -15rem 0 0 15rem #ffbdd8, -30rem 0 0 29.4rem #ffc2db;
   cursor: pointer;
 }
 
-input[type='range']::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 0.8rem;
-  width: 0.8rem;
-  background: #fff;
-  border-radius: 50%;
-  margin-top: 0.1rem;
-  box-shadow: 1px 1px 1px var(--neutral-300);
-  cursor: ew-resize;
-}
-
-/*  TO DO
-            Fix the white sèace around the Firefox slider */
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=/styles.5c8f3eab.css.map */
