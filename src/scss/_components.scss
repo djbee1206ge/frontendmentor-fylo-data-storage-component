@@ -182,58 +182,75 @@ input[type="range"] {
     outline: none;
     
   }
-    &::-moz-range-track{
-        background: var(--neutral-600);
-        border-radius: 0.25rem;
-        height: 0.625rem;
-        cursor:pointer;
-        color: red;
-      }
-      &::-moz-range-thumb {
-          -webkit-appearance: none;
-          height: 0.625rem;
-          width: 0.625rem;
-          background: white;
-          border-radius: 50%;
-          margin-top: -7px;  
-          box-shadow: 
-          -1rem 0 0 1rem hsl(335, 100%, 65%),
-          -2rem 0 0 2rem hsl(335, 100%, 67%),
-          -3rem 0 0 3rem hsl(335, 100%, 69%),
-          -4rem 0 0 4rem hsl(335, 100%, 71%),
-          -5rem 0 0 5rem hsl(335, 100%, 73%),
-          -6rem 0 0 6rem hsl(335, 100%, 75%),
-          -7rem 0 0 7rem hsl(335, 100%, 77%),
-          -8rem 0 0 8rem hsl(335, 100%, 79%),
-          -9rem 0 0 9rem hsl(335, 100%, 81%),
-          -10rem 0 0 10rem hsl(335, 100%, 82%),
-          -11rem 0 0 11rem hsl(335, 100%, 83%),
-          -12rem 0 0 12rem hsl(335, 100%,84%),
-          -13rem 0 0 13rem hsl(335, 100%, 85%),
-          -14rem 0 0 14rem hsl(335, 100%, 86%),
-          -15rem 0 0 15rem hsl(335, 100%, 87%),
-          -30rem 0 0 29.4rem hsl(335, 100%, 88%),
-          ;
-          cursor:pointer;        
-        }
-  
+  &::-webkit-slider-runnable-track {
+    background: var(--neutral-600);
+    border-radius: 0.25rem;
+    height: 0.625rem;
+    cursor:pointer;
+    color: red;
+  }
+  &::-moz-range-track{
+      background: var(--neutral-600);
+      border-radius: 0.25rem;
+      height: 0.625rem;
+      cursor:pointer;
+      color: red;
+    }
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 0.625rem;
+    width: 0.625rem;
+    background: white;
+    border-radius: 50%;
+    border: none;
+    // margin-top: -7px;  
+    box-shadow: 
+    -1rem 0 0 0.8rem hsl(335, 100%, 65%),
+    -2rem 0 0 1.5rem hsl(335, 100%, 67%),
+    -3rem 0 0 2.5rem hsl(335, 100%, 69%),
+    -4rem 0 0 3.5rem hsl(335, 100%, 71%),
+    -5rem 0 0 4.5rem hsl(335, 100%, 73%),
+    -6rem 0 0 5.5rem hsl(335, 100%, 75%),
+    -7rem 0 0 6.5rem hsl(335, 100%, 77%),
+    -8rem 0 0 7.5rem hsl(335, 100%, 79%),
+    -9rem 0 0 8.5rem hsl(335, 100%, 81%),
+    -10rem 0 0 9.5rem hsl(335, 100%, 82%),
+    -11rem 0 0 10.5rem hsl(335, 100%, 83%),
+    -12rem 0 0 11.5rem hsl(335, 100%,84%),
+    -13rem 0 0 12.5rem hsl(335, 100%, 85%),
+    -14rem 0 0 13.5rem hsl(335, 100%, 86%),
+    -15rem 0 0 14.5rem hsl(335, 100%, 87%),
+    -30rem 0 0 29.3rem hsl(335, 100%, 88%),
+    ;
+    cursor:pointer;   
+  }
+  &::-moz-range-thumb {
+      -webkit-appearance: none;
+      height: 0.625rem;
+      width: 0.625rem;
+      background: white;
+      border-radius: 50%;
+      border: none;
+      margin-top: -7px;  
+      box-shadow: 
+      -1rem 0 0 0.8rem hsl(335, 100%, 65%),
+      -2rem 0 0 1.5rem hsl(335, 100%, 67%),
+      -3rem 0 0 2.5rem hsl(335, 100%, 69%),
+      -4rem 0 0 3.5rem hsl(335, 100%, 71%),
+      -5rem 0 0 4.5rem hsl(335, 100%, 73%),
+      -6rem 0 0 5.5rem hsl(335, 100%, 75%),
+      -7rem 0 0 6.5rem hsl(335, 100%, 77%),
+      -8rem 0 0 7.5rem hsl(335, 100%, 79%),
+      -9rem 0 0 8.5rem hsl(335, 100%, 81%),
+      -10rem 0 0 9.5rem hsl(335, 100%, 82%),
+      -11rem 0 0 10.5rem hsl(335, 100%, 83%),
+      -12rem 0 0 11.5rem hsl(335, 100%,84%),
+      -13rem 0 0 12.5rem hsl(335, 100%, 85%),
+      -14rem 0 0 13.5rem hsl(335, 100%, 86%),
+      -15rem 0 0 14.5rem hsl(335, 100%, 87%),
+      -30rem 0 0 29.3rem hsl(335, 100%, 88%),
+      ;
+      cursor:pointer;        
+    }  
 }    
   
-        // &::-ms-track {
-          //   background: purple;
-          //   border-radius: 0.25rem;
-          //   width: 100%;
-          //   height: 0.625rem;
-          //   cursor:pointer;
-          // }
-          // &::-ms-thumb {
-            //   -webkit-appearance: none;
-            //   height: 1.5rem;
-            //   width: 1.5rem;
-            //   background: #fff;
-            //   border-radius: 50%;
-            //   border: 1px solid purple;
-            //   margin-top: -7px;  
-            //   cursor:pointer;        
-            // }
-// }

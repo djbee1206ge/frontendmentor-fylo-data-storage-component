@@ -314,6 +314,13 @@ input[type=range] {
 input[type=range]:focus {
   outline: none;
 }
+input[type=range]::-webkit-slider-runnable-track {
+  background: var(--neutral-600);
+  border-radius: 0.25rem;
+  height: 0.625rem;
+  cursor: pointer;
+  color: red;
+}
 input[type=range]::-moz-range-track {
   background: var(--neutral-600);
   border-radius: 0.25rem;
@@ -321,14 +328,25 @@ input[type=range]::-moz-range-track {
   cursor: pointer;
   color: red;
 }
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 0.625rem;
+  width: 0.625rem;
+  background: white;
+  border-radius: 50%;
+  border: none;
+  box-shadow: -1rem 0 0 0.8rem #ff4d97, -2rem 0 0 1.5rem #ff579d, -3rem 0 0 2.5rem #ff61a3, -4rem 0 0 3.5rem #ff6ba9, -5rem 0 0 4.5rem #ff75af, -6rem 0 0 5.5rem #ff80b5, -7rem 0 0 6.5rem #ff8abb, -8rem 0 0 7.5rem #ff94c1, -9rem 0 0 8.5rem #ff9ec6, -10rem 0 0 9.5rem #ffa3c9, -11rem 0 0 10.5rem #ffa8cc, -12rem 0 0 11.5rem #ffadcf, -13rem 0 0 12.5rem #ffb3d2, -14rem 0 0 13.5rem #ffb8d5, -15rem 0 0 14.5rem #ffbdd8, -30rem 0 0 29.3rem #ffc2db;
+  cursor: pointer;
+}
 input[type=range]::-moz-range-thumb {
   -webkit-appearance: none;
   height: 0.625rem;
   width: 0.625rem;
   background: white;
   border-radius: 50%;
+  border: none;
   margin-top: -7px;
-  box-shadow: -1rem 0 0 1rem #ff4d97, -2rem 0 0 2rem #ff579d, -3rem 0 0 3rem #ff61a3, -4rem 0 0 4rem #ff6ba9, -5rem 0 0 5rem #ff75af, -6rem 0 0 6rem #ff80b5, -7rem 0 0 7rem #ff8abb, -8rem 0 0 8rem #ff94c1, -9rem 0 0 9rem #ff9ec6, -10rem 0 0 10rem #ffa3c9, -11rem 0 0 11rem #ffa8cc, -12rem 0 0 12rem #ffadcf, -13rem 0 0 13rem #ffb3d2, -14rem 0 0 14rem #ffb8d5, -15rem 0 0 15rem #ffbdd8, -30rem 0 0 29.4rem #ffc2db;
+  box-shadow: -1rem 0 0 0.8rem #ff4d97, -2rem 0 0 1.5rem #ff579d, -3rem 0 0 2.5rem #ff61a3, -4rem 0 0 3.5rem #ff6ba9, -5rem 0 0 4.5rem #ff75af, -6rem 0 0 5.5rem #ff80b5, -7rem 0 0 6.5rem #ff8abb, -8rem 0 0 7.5rem #ff94c1, -9rem 0 0 8.5rem #ff9ec6, -10rem 0 0 9.5rem #ffa3c9, -11rem 0 0 10.5rem #ffa8cc, -12rem 0 0 11.5rem #ffadcf, -13rem 0 0 12.5rem #ffb3d2, -14rem 0 0 13.5rem #ffb8d5, -15rem 0 0 14.5rem #ffbdd8, -30rem 0 0 29.3rem #ffc2db;
   cursor: pointer;
 }
 
