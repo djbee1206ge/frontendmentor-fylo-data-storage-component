@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/djbee1206ge/frontendmentor-fylo-data-storage-component"
+    "url": "git+https://github.com/djbee1206ge/frontendmentor-fylo-data-storage-component.git"
   },
   "bugs": {
     "url": "https://github.com/djbee1206ge/frontendmentor-fylo-data-storage-component/issues"
