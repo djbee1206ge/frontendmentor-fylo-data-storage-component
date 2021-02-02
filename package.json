@@ -13,8 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "y"
+    "url": "https://github.com/djbee1206ge/frontendmentor-fylo-data-storage-component"
   },
+  "bugs": {
+    "url": "https://github.com/djbee1206ge/frontendmentor-fylo-data-storage-component/issues"
+  },
+  "homepage": "https://github.com/djbee1206ge/frontendmentor-fylo-data-storage-component#readme"
   "author": "David Beecheno",
   "license": "MIT"
 }
