@@ -1,0 +1,43 @@
+:root {
+  --mobile: 375px;
+  --desktop: 1440px;
+  
+  --neutral-100: hsl(0, 0%, 100%);
+  --neutral-200: hsl(243, 100%, 93%);
+  --neutral-300: hsl(229, 7%, 55%);
+  --neutral-400: hsl(179, 100%, 91%);
+  
+  --neutral-500: hsl(228, 56%, 26%);
+  --neutral-600: hsl(229, 57%, 11%);
+  --neutral-900: hsl(0, 0%, 0%);
+  
+  --gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+
+
+  
+  --fs-400: 0.875em; 
+  --fs-500: 1rem;
+
+  --fw-400: 400;
+  --fw-700: 700;
+  
+  --bs-200: 0.1rem 0.1rem 0.5rem var(--neutral-500);
+  --bs-300: 0.1rem 0.1rem 0.5rem var(--neutral-600);
+  --ff-regular: 'Raleway', sans-serif;
+}
+
+body {
+  position: relative;
+  font-family: var(--ff-regular);
+  background-color: var(--neutral-300);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: var(--fs-400);
+  color:var(--neutral-100);
+  @media (max-width: 23.4rem) {
+    font-size: 70%;
+  }
+}
